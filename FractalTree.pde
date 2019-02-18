@@ -30,7 +30,8 @@ line(x,y,endX1,endY2);
 line(x,y,endX2,endY2);
 //write code so that if branchLength is larger than smallestBranch, drawBranches is called twice, once for each of the endpoints, e.g. (endX1,endY1). 
 //Be sure to use the two different angles for the two different branches.
-if(branchLength>smallestBranch){
- drawBranches(endX1,endY1); 
-} 
+if (branchLength>smallestBranch){
+    drawBranches(endX1,endY1,branchLength,angle1+1);
+    drawBranches(endX2,endY2,branchLength,angle2-1);
+  }
 }
